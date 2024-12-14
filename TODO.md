@@ -1,3 +1,5 @@
+尝试放弃给变量加冠词，而是给 type 加 -t 后缀
+
 # std
 
 [std] boolean-lattice/ -- absorb.cic
