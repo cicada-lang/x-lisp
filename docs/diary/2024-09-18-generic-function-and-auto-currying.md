@@ -1,6 +1,6 @@
 ---
 title: Generic Function and Auto Currying
-date: 2014-09-18
+date: 2024-09-18
 ---
 
 注意，generic function 会让 auto currying 变复杂。
@@ -55,3 +55,12 @@ date: 2014-09-18
 正确的处理方式是，在 import 的时候，
 把相关的 handler patch 到当前 module 的，
 代表 generic function 的 cell 中。
+
+------
+
+[2025-02-09] 还有一种方案是禁止函数的 auto currying。
+或者设计新的语法来明显表示 currying。
+
+注意，inet-lisp 中，
+node constructor 是带有 auto currying 的，
+并且其语义与 function 的 auto currying 不同。
