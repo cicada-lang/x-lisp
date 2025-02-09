@@ -1,5 +1,3 @@
-group/group -- type with -t
-
 group/group-category -- type with -t
 group/group-homomorphism -- type with -t
 

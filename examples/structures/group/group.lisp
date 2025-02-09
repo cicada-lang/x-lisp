@@ -1,24 +1,19 @@
-(import monoid "monoid.lisp")
+(import monoid-t "monoid.lisp")
 
-(define-class group (monoid)
-  :inverse (-> @element @element)
-
+(define-class group-t (monoid-t)
+  :inverse (-> @element-t @element-t)
   :inverse-left
-  (forall ((x @element))
-    (equal @element
-           (@compose (@inverse x) x)
-           @id))
-
+  (forall ((x @element-t))
+    (equal-t @element-t
+      (@compose (@inverse x) x)
+      @id))
   :inverse-right
-  (forall ((x @element))
-    (equal @element
-           (@compose x (@inverse x))
-           @id)))
+  (forall ((x @element-t))
+    (equal-t @element-t
+      (@compose x (@inverse x))
+      @id)))
 
 (claim group-div
-  (forall ((g group))
-    (-> g:element g:element
-        g:element)))
-
-(define (group-div (g group) (x g:element) (y g:element))
-  (g:compose x (g:inverse y)))
+  (forall ((g group-t))
+    (-> g:element-t g:element-t g:element-t)))
+(define (group-div g x y) (g:compose x (g:inverse y)))
