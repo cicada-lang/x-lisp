@@ -1,4 +1,4 @@
-(import group "group.cic")
+(import group "group.lisp")
 
 (define trivial-group
   (create group

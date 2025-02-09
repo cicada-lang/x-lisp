@@ -1,6 +1,6 @@
-(import group "group.cic")
-(import category "../category/index.cic")
-(import equal-swap equal-map equal-compose "../equality/index.cic")
+(import group "group.lisp")
+(import category "../category/index.lisp")
+(import equal-swap equal-map equal-compose "../equality/index.lisp")
 
 (export group-homomorphism
         id-group-homomorphism

@@ -1,5 +1,0 @@
-(export category "category.cic")
-(export functor "functor.cic")
-(export naturaltrans-formation "naturaltrans-formation.cic")
-(export isomorphism "isomorphism.cic")
-(export trivial-category "trivial-category.cic")

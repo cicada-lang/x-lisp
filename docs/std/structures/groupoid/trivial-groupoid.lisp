@@ -1,5 +1,5 @@
-(import groupoid "groupoid.cic")
-(import isomorphism trivial-category "../category/index.cic")
+(import groupoid "groupoid.lisp")
+(import isomorphism trivial-category "../category/index.lisp")
 
 (define trivial-isomorphism
   (create isomorphism

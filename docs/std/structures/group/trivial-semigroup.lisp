@@ -1,4 +1,4 @@
-(import semigroup "semigroup.cic")
+(import semigroup "semigroup.lisp")
 
 (define trivial-semigroup
   (create semigroup

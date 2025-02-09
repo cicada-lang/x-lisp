@@ -1,7 +1,7 @@
-(import category "category.cic")
-(import terminal "terminal.cic")
-(import isomorphism "isomorphism.cic")
-(import equal-swap equal-compose "../equality/index.cic")
+(import category "category.lisp")
+(import terminal "terminal.lisp")
+(import isomorphism "isomorphism.lisp")
+(import equal-swap equal-compose "../equality/index.lisp")
 
 ;; Terminal is an universal construction,
 ;; if a terminal object exists, it is unique up to unique isomorphism.

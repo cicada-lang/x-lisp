@@ -1,4 +1,4 @@
-(import category isomorphism "../category/index.cic")
+(import category isomorphism "../category/index.lisp")
 
 (export groupoid)
 

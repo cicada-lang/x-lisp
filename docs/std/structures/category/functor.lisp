@@ -1,4 +1,4 @@
-(import category "category.cic")
+(import category "category.lisp")
 
 ;; To any natural construction on structures of one species,
 ;; yielding structures of another species,

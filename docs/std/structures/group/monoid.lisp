@@ -1,4 +1,4 @@
-(import semigroup "semigroup.cic")
+(import semigroup "semigroup.lisp")
 
 (export monoid)
 

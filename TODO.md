@@ -1,4 +1,35 @@
-尝试放弃给变量加冠词，而是给 type 加 -t 后缀
+langs/lambda -- type with -t
+datatypes/bool -- type with -t
+datatypes/either -- type with -t
+datatypes/fin -- type with -t
+datatypes/less-than -- type with -t
+datatypes/list -- type with -t
+datatypes/nat -- type with -t
+datatypes/vector -- type with -t
+
+category/category -- type with -t
+category/epimorphism -- type with -t
+category/functor -- type with -t
+category/index -- type with -t
+category/initial -- type with -t
+category/isomorphism -- type with -t
+category/monomorphism -- type with -t
+category/natural-transformation -- type with -t
+category/terminal -- type with -t
+category/terminal-iso-unique -- type with -t
+category/trivial-category -- type with -t
+equality/index -- type with -t
+equality/utils -- type with -t
+group/group-category -- type with -t
+group/group -- type with -t
+group/group-homomorphism -- type with -t
+group/index -- type with -t
+group/monoid -- type with -t
+group/semigroup -- type with -t
+group/trivial-group -- type with -t
+group/trivial-semigroup -- type with -t
+groupoid/groupoid -- type with -t
+groupoid/trivial-groupoid -- type with -t
 
 change mul to compose for group
 
@@ -9,13 +40,13 @@ change mul to compose for group
 
 # std
 
-[std] boolean-lattice/ -- absorb.cic
-[std] boolean-lattice/ -- associative.todo.cic
-[std] boolean-lattice/ -- boolean-domain.cic
-[std] boolean-lattice/ -- boolean-lattice.cic
-[std] boolean-lattice/ -- bound.cic
-[std] boolean-lattice/ -- dual.cic
-[std] boolean-lattice/ -- dual-involutive.cic
-[std] boolean-lattice/ -- idempotent.cic
-[std] boolean-lattice/ -- order.cic
-[std] boolean-lattice/ -- unique-id.cic
+[std] boolean-lattice/ -- absorb.lisp
+[std] boolean-lattice/ -- associative.todo.lisp
+[std] boolean-lattice/ -- boolean-domain.lisp
+[std] boolean-lattice/ -- boolean-lattice.lisp
+[std] boolean-lattice/ -- bound.lisp
+[std] boolean-lattice/ -- dual.lisp
+[std] boolean-lattice/ -- dual-involutive.lisp
+[std] boolean-lattice/ -- idempotent.lisp
+[std] boolean-lattice/ -- order.lisp
+[std] boolean-lattice/ -- unique-id.lisp

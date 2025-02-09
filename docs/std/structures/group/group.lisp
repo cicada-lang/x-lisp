@@ -1,4 +1,4 @@
-(import monoid "monoid.cic")
+(import monoid "monoid.lisp")
 
 (export group)
 

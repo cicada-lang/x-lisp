@@ -1,5 +1,5 @@
-(import category "category.cic")
-(import functor "functor.cic")
+(import category "category.lisp")
+(import functor "functor.lisp")
 
 ;; To each natural translation,
 ;; from a construction `F` of type `A -> B`,

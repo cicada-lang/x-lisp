@@ -1,4 +1,4 @@
-(import category "category.cic")
+(import category "category.lisp")
 
 (define trivial-category
   (create category
