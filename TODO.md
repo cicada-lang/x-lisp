@@ -1,3 +1,12 @@
+group/group-category -- type with -t
+group/group -- type with -t
+group/group-homomorphism -- type with -t
+group/index -- type with -t
+group/monoid -- type with -t
+group/semigroup -- type with -t
+group/trivial-group -- type with -t
+group/trivial-semigroup -- type with -t
+
 category/category -- type with -t
 category/epimorphism -- type with -t
 category/functor -- type with -t
@@ -9,18 +18,6 @@ category/natural-transformation -- type with -t
 category/terminal -- type with -t
 category/terminal-iso-unique -- type with -t
 category/trivial-category -- type with -t
-
-equality/index -- type with -t
-equality/utils -- type with -t
-
-group/group-category -- type with -t
-group/group -- type with -t
-group/group-homomorphism -- type with -t
-group/index -- type with -t
-group/monoid -- type with -t
-group/semigroup -- type with -t
-group/trivial-group -- type with -t
-group/trivial-semigroup -- type with -t
 
 groupoid/groupoid -- type with -t
 groupoid/trivial-groupoid -- type with -t

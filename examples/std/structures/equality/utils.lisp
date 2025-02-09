@@ -1,41 +1,39 @@
-(export equal-map equal-swap equal-compose)
-
 (claim equal-map
-  (implicit ((x type)
-             (y type)
-             (from x)
-             (to x))
-    (forall ((f (-> x y))
-             (target (equal x from to)))
-      (equal y (f from) (f to)))))
+  (implicit ((A type-t)
+             (B type-t)
+             (from A)
+             (to A))
+    (forall ((f (-> A B))
+             (target (equal-t A from to)))
+      (equal-t B (f from) (f to)))))
 
-(define (equal-map (implicit x y from to) f target)
+(define (equal-map (implicit A B from to) f target)
   (replace target
-    (lambda (x) (equal y (f from) (f x)))
+    (lambda (x) (equal-t B (f from) (f x)))
     refl))
 
 
 (claim equal-swap
-  (implicit ((a type)
-             (x a)
-             (y a))
-    (-> (equal a x y) (equal a y x))))
+  (implicit ((A type-t)
+             (x A)
+             (y A))
+    (-> (equal-t A x y) (equal-t A y x))))
 
-(define (equal-swap (implicit a x y) xy-equal)
+(define (equal-swap (implicit A x y) xy-equal)
   (replace xy-equal
-    (lambda (w) (equal a w x))
+    (lambda (w) (equal-t A w x))
     refl))
 
 
 (claim equal-compose
-  (implicit ((a type)
-             (x a)
-             (y a)
-             (z a))
-    (-> (equal a x y) (equal a y z)
-        (equal a x z))))
+  (implicit ((A type-t)
+             (x A)
+             (y A)
+             (z A))
+    (-> (equal-t A x y) (equal-t A y z)
+        (equal-t A x z))))
 
-(define (equal-compose (implicit a x y z) xy-equal yz-equal)
+(define (equal-compose (implicit A x y z) xy-equal yz-equal)
   (replace yz-equal
-    (lambda (w) (equal a x w))
+    (lambda (w) (equal-t A x w))
     xy-equal))

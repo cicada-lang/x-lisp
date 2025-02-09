@@ -1,1 +1,1 @@
-(export equal-map equal-swap equal-compose "utils.lisp")
+(import equal-map equal-swap equal-compose "utils.lisp")
