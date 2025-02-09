@@ -1,6 +1,3 @@
-category/terminal-iso-unique -- type with -t
-category/trivial-category -- type with -t
-
 group/trivial-group -- type with -t
 group/trivial-semigroup -- type with -t
 
