@@ -1,4 +1,3 @@
-group/group-category -- type with -t
 group/group-homomorphism -- type with -t
 
 groupoid/groupoid -- type with -t
