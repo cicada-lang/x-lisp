@@ -3,5 +3,5 @@
 (define trivial-semigroup
   (create semigroup
     :element trivial
-    :mul (lambda (x y) sole)
-    :mul-associative (lambda (x y z) refl)))
+    :compose (lambda (x y) sole)
+    :compose-associative (lambda (x y z) refl)))

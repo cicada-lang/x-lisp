@@ -6,13 +6,13 @@
   :inverse-left
   (forall ((x @element))
     (equal @element
-           (@mul (@inverse x) x)
+           (@compose (@inverse x) x)
            @id))
 
   :inverse-right
   (forall ((x @element))
     (equal @element
-           (@mul x (@inverse x))
+           (@compose x (@inverse x))
            @id)))
 
 (claim group-div
@@ -21,4 +21,4 @@
         g:element)))
 
 (define (group-div (g group) (x g:element) (y g:element))
-  (g:mul x (g:inverse y)))
+  (g:compose x (g:inverse y)))

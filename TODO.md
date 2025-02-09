@@ -1,5 +1,3 @@
-change `mul` to `compose` for group
-
 group/monoid -- type with -t
 group/group -- type with -t
 

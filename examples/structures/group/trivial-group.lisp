@@ -3,8 +3,8 @@
 (define trivial-group
   (create group
     :element trivial
-    :mul (lambda (x y) sole)
-    :mul-associative (lambda (x y z) refl)
+    :compose (lambda (x y) sole)
+    :compose-associative (lambda (x y z) refl)
     :id sole
     :id-left (lambda (x) refl)
     :id-right (lambda (x) refl)
@@ -12,9 +12,9 @@
     :inverse-left (lambda (x) refl)
     :inverse-right (lambda (x) refl)))
 
-trivial-group:mul
-(trivial-group:mul sole)
-(trivial-group:mul sole sole)
+trivial-group:compose
+(trivial-group:compose sole)
+(trivial-group:compose sole sole)
 
 trivial-group:div
 (trivial-group:div sole)

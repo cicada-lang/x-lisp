@@ -13,12 +13,12 @@
          (@homo @dom:id)
          @cod:id)
 
-  :homo-preserve-mul
+  :homo-preserve-compose
   (forall ((x @dom:element)
            (y @dom:element))
     (equal (@cod:element)
-           (@homo (@dom:mul x y))
-           (@cod:mul (@homo x) (@homo y)))))
+           (@homo (@dom:compose x y))
+           (@cod:compose (@homo x) (@homo y)))))
 
 (claim id-group-homomorphism
   (forall ((G group))
@@ -30,7 +30,7 @@
     :cod G
     :homo (lambda (x) x)
     :homo-preserve-id refl
-    :homo-preserve-mul (lambda (x y) refl)))
+    :homo-preserve-compose (lambda (x y) refl)))
 
 (claim compose-group-homomorphism
   (implicit ((G group)
@@ -56,12 +56,12 @@
      :by g:homo-preserve-id
      K:id)
 
-    :homo-preserve-mul
+    :homo-preserve-compose
     (lambda (x y)
       (equivalent
        :type K:element
-       (g:homo (f:homo (G:mul x y)))
-       :by (equal-map g:homo (f:homo-preserve-mul x y))
-       (g:homo (H:mul (f:homo x) (f:homo y)))
-       :by (g:homo-preserve-mul (f:homo x) (f:homo y))
-       (K:mul (g:homo (f:homo x)) (g:homo (f:homo y)))))))
+       (g:homo (f:homo (G:compose x y)))
+       :by (equal-map g:homo (f:homo-preserve-compose x y))
+       (g:homo (H:compose (f:homo x) (f:homo y)))
+       :by (g:homo-preserve-compose (f:homo x) (f:homo y))
+       (K:compose (g:homo (f:homo x)) (g:homo (f:homo y)))))))
