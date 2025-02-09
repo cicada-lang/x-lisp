@@ -1,16 +1,13 @@
-(import category "category.lisp")
+(import category-t "category.lisp")
 
-(export initial)
-
-(define-class initial ()
-  :cat category
-  :object @cat:object
-
+(define-class initial-t ()
+  :cat category-t
+  :object @cat:object-t
   :morphism
-  (forall ((x @cat:object))
-    (@cat:morphism @object x))
-
+  (forall ((x @cat:object-t))
+    (@cat:morphism-t @object x))
   :morphism-unique
-  (implicit ((x @cat:object))
-    (forall ((f (@cat:morphism @object x)))
-      (equal-t (@cat:morphism @object x) f (@morphism x)))))
+  (implicit ((x @cat:object-t))
+    (forall ((f (@cat:morphism-t @object x)))
+      (equal-t (@cat:morphism-t @object x)
+        f (@morphism x)))))

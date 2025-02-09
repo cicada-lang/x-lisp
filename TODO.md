@@ -1,4 +1,3 @@
-category/initial -- type with -t
 category/terminal -- type with -t
 
 category/terminal-iso-unique -- type with -t
