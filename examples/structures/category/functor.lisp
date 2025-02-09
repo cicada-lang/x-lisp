@@ -1,4 +1,4 @@
-(import category "category.lisp")
+(import category-t "category.lisp")
 
 ;; To any natural construction on structures of one species,
 ;; yielding structures of another species,
@@ -11,33 +11,31 @@
 ;; and endo-functors are often containers.
 
 ;; Functor can also be called natural-construction,
-;; which will let the term `NaturalTransformation` make sense.
+;; which will let the term `natural-transformation` make sense.
 
-(export functor)
-
-(define-class functor ()                ;
-  :dom category
-  :cod category
-  :map (-> @dom:object @cod:object)
+(define-class functor-t ()                ;
+  :dom category-t
+  :cod category-t
+  :map (-> @dom:object-t @cod:object-t)
 
   :fmap
-  (implicit ((x @dom:object)
-             (y @dom:object))
-    (forall ((f (@dom:morphism x y)))
-      (@cod:morphism (@map x) (@map y))))
+  (implicit ((x @dom:object-t)
+             (y @dom:object-t))
+    (forall ((f (@dom:morphism-t x y)))
+      (@cod:morphism-t (@map x) (@map y))))
 
   :fmap-preserve-compose
-  (implicit ((x @dom:object)
-             (y @dom:object)
-             (z @dom:object))
-    (forall ((f (@dom:morphism x y))
-             (g (@dom:morphism y z)))
-      (equal-t (@cod:morphism (@map x) (@map z))
-             (@fmap (@dom:compose f g))
-             (@cod:compose (@fmap f) (@fmap g)))))
+  (implicit ((x @dom:object-t)
+             (y @dom:object-t)
+             (z @dom:object-t))
+    (forall ((f (@dom:morphism-t x y))
+             (g (@dom:morphism-t y z)))
+      (equal-t (@cod:morphism-t (@map x) (@map z))
+        (@fmap (@dom:compose f g))
+        (@cod:compose (@fmap f) (@fmap g)))))
 
   :fmap-preserve-id
-  (forall ((x @dom:object))
-    (equal-t (@cod:morphism (@map x) (@map x))
-           (@fmap (@dom:id x))
-           (@cod:id (@map x)))))
+  (forall ((x @dom:object-t))
+    (equal-t (@cod:morphism-t (@map x) (@map x))
+      (@fmap (@dom:id x))
+      (@cod:id (@map x)))))
