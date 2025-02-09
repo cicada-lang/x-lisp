@@ -1,5 +1,3 @@
-category/terminal -- type with -t
-
 category/terminal-iso-unique -- type with -t
 category/trivial-category -- type with -t
 

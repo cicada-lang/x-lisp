@@ -1,16 +1,13 @@
-(import category "category.lisp")
+(import category-t "category.lisp")
 
-(export terminal)
-
-(define-class terminal ()
-  :cat category
-  :object @cat:object
-
+(define-class terminal-t ()
+  :cat category-t
+  :object @cat:object-t
   :morphism
-  (forall ((x @cat:object))
-    (@cat:morphism x @object))
-
+  (forall ((x @cat:object-t))
+    (@cat:morphism-t x @object))
   :morphism-unique
-  (implicit ((x @cat:object))
-    (forall ((f (@cat:morphism x @object)))
-      (equal-t (@cat:morphism x @object) f (@morphism x)))))
+  (implicit ((x @cat:object-t))
+    (forall ((f (@cat:morphism-t x @object)))
+      (equal-t (@cat:morphism-t x @object)
+        f (@morphism x)))))
