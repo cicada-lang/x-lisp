@@ -1,22 +1,20 @@
-(import category "category.lisp")
+(import category-t "category.lisp")
 
-(export monomorphism)
-
-(define-class monomorphism ()
-  :cat category
-  :dom @cat:object
-  :cod @cat:object
-  :morphism (@cat:morphism @dom @cod)
+(define-class monomorphism-t ()
+  :cat category-t
+  :dom @cat:object-t
+  :cod @cat:object-t
+  :morphism (@cat:morphism-t @dom @cod)
 
   :cancel-right
-  (implicit ((x @cat:object)
-             (f (@cat:morphism x @dom))
-             (g (@cat:morphism x @dom)))
-    (-> (equal-t (@cat:morphism x @cod)
-               (@cat:compose f @morphism)
-               (@cat:compose g @morphism))
-        (equal-t (@cat:morphism x @dom) f g))))
+  (implicit ((x @cat:object-t)
+             (f (@cat:morphism-t x @dom))
+             (g (@cat:morphism-t x @dom)))
+    (-> (equal-t (@cat:morphism-t x @cod)
+          (@cat:compose f @morphism-t)
+          (@cat:compose g @morphism-t))
+        (equal-t (@cat:morphism-t x @dom) f g))))
 
 ;; NOTE Examples:
-;;   (check mono (monomorphism cat x y))
-;;   (check mono:morphism (mono:cat:morphism x y))
+;;   (check mono (monomorphism-t cat x y))
+;;   (check mono:morphism (mono:cat:morphism-t x y))
