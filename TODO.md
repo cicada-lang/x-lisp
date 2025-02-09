@@ -1,4 +1,3 @@
-groupoid/groupoid -- type with -t
 groupoid/trivial-groupoid -- type with -t
 
 langs/lambda -- type with -t

@@ -1,19 +1,15 @@
-(import category isomorphism "../category/index.lisp")
+(import category-t isomorphism-t "../category/index.lisp")
 
-(export groupoid)
-
-(define-class groupoid (category)
+(define-class groupoid-t (category-t)
   :inverse
-  (implicit ((x @object)
-             (y @object))
-    (-> (@morphism x y)
-        (@morphism y x)))
-
-
+  (implicit ((x @object-t)
+             (y @object-t))
+    (-> (@morphism-t x y)
+        (@morphism-t y x)))
   ;; NOTE The following use of `isomorphism`
   ;;   is an example of "partly fulfilled object construction".
   :inverse-iso
-  (implicit ((x @object)
-             (y @object))
-    (forall (f (@morphism x y))
-      (isomorphism @super x y f (@inverse f)))))
+  (implicit ((x @object-t)
+             (y @object-t))
+    (forall (f (@morphism-t x y))
+      (isomorphism-t @super x y f (@inverse f)))))
