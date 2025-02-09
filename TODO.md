@@ -1,5 +1,3 @@
-langs/lambda -- type with -t
-
 回顾带有类型系统的 lisp 语法设计
 
 - kent-back book notes
