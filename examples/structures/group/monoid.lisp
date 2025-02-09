@@ -1,12 +1,6 @@
-(import semigroup "semigroup.lisp")
+(import semigroup-t "semigroup.lisp")
 
-(define-class monoid (semigroup)
-  :id element
-
-  :id-left
-  (forall ((x @element))
-    (equal @element (@compose @id x) x))
-
-  :id-right
-  (forall ((x @element))
-    (equal @element (@compose x @id) x)))
+(define-class monoid-t (semigroup-t)
+  :id @element-t
+  :id-left (forall ((x @element-t)) (equal-t @element-t (@compose @id x) x))
+  :id-right (forall ((x @element-t)) (equal-t @element-t (@compose x @id) x)))

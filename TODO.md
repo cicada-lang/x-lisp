@@ -1,4 +1,3 @@
-group/monoid -- type with -t
 group/group -- type with -t
 
 group/group-category -- type with -t
