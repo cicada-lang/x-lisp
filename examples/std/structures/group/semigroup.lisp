@@ -1,14 +1,10 @@
-(export semigroup)
-
-(define-class semigroup ()
-  :element type
-
-  :mul (-> @element @element @element)
-
-  :mul-associative
-  (forall ((x @element)
-           (y @element)
-           (z @element))
-    (equal @element
-           (@mul x (@mul y z))
-           (@mul (@mul x y) z))))
+(define-class semigroup-t ()
+  :element-t type-t
+  :compose (-> @element-t @element-t @element-t)
+  :compose-associative
+  (forall ((x @element-t)
+           (y @element-t)
+           (z @element-t))
+    (equal-t @element-t
+      (@compose x (@compose y z))
+      (@compose (@compose x y) z))))

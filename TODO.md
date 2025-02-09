@@ -1,11 +1,15 @@
-group/group-category -- type with -t
-group/group -- type with -t
-group/group-homomorphism -- type with -t
-group/index -- type with -t
+change `mul` to `compose`
+
 group/monoid -- type with -t
-group/semigroup -- type with -t
+group/group -- type with -t
+
+group/group-category -- type with -t
+group/group-homomorphism -- type with -t
+
 group/trivial-group -- type with -t
 group/trivial-semigroup -- type with -t
+
+
 
 category/category -- type with -t
 category/epimorphism -- type with -t
@@ -23,8 +27,6 @@ groupoid/groupoid -- type with -t
 groupoid/trivial-groupoid -- type with -t
 
 langs/lambda -- type with -t
-
-change mul to compose for group
 
 回顾带有类型系统的 lisp 语法设计
 

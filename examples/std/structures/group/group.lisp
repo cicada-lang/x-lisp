@@ -1,7 +1,5 @@
 (import monoid "monoid.lisp")
 
-(export group)
-
 (define-class group (monoid)
   :inverse (-> @element @element)
 

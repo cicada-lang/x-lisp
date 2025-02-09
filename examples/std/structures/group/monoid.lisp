@@ -1,7 +1,5 @@
 (import semigroup "semigroup.lisp")
 
-(export monoid)
-
 (define-class monoid (semigroup)
   :id element
 

@@ -2,10 +2,6 @@
 (import category "../category/index.lisp")
 (import equal-swap equal-map equal-compose "../equality/index.lisp")
 
-(export group-homomorphism
-        id-group-homomorphism
-        compose-group-homomorphism)
-
 (define-class group-homomorphism ()
   :dom group
   :cod group
