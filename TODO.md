@@ -1,12 +1,14 @@
 category/category -- type with -t
-category/epimorphism -- type with -t
 category/functor -- type with -t
-category/index -- type with -t
-category/initial -- type with -t
-category/isomorphism -- type with -t
-category/monomorphism -- type with -t
 category/natural-transformation -- type with -t
+
+category/monomorphism -- type with -t
+category/epimorphism -- type with -t
+category/isomorphism -- type with -t
+
+category/initial -- type with -t
 category/terminal -- type with -t
+
 category/terminal-iso-unique -- type with -t
 category/trivial-category -- type with -t
 
