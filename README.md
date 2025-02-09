@@ -18,3 +18,8 @@ Dynamicly typed language with GC (optional explicit free).
   ((exp-fn name body) ...)
   ((exp-ap target arg) ...))
 ```
+
+```scheme
+(declare add (-> nat? nat? nat?))
+(define (add x y) ...)
+```
