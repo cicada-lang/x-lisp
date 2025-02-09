@@ -1,18 +1,15 @@
-(import category "category.lisp")
+(import category-t "category.lisp")
 
-(export epimorphism)
-
-(define-class epimorphism ()
-  :cat category
-  :dom @cat:object
-  :cod @cat:object
-  :morphism (@cat:morphism @dom @cod)
-
+(define-class epimorphism-t ()
+  :cat category-t
+  :dom @cat:object-t
+  :cod @cat:object-t
+  :morphism (@cat:morphism-t @dom @cod)
   :cancel-left
-  (implicit ((x @cat:object)
-             (f (@cat:morphism @cod x))
-             (g (@cat:morphism @cod x)))
-    (-> (equal-t (@cat:morphism @dom x)
-               (@cat:compose @morphism f)
-               (@cat:compose @morphism g))
-        (equal-t (@cat:morphism @cod x) f g))))
+  (implicit ((x @cat:object-t)
+             (f (@cat:morphism-t @cod x))
+             (g (@cat:morphism-t @cod x)))
+    (-> (equal-t (@cat:morphism-t @dom x)
+          (@cat:compose @morphism-t f)
+          (@cat:compose @morphism-t g))
+        (equal-t (@cat:morphism-t @cod x) f g))))

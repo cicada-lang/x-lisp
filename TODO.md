@@ -2,7 +2,6 @@ category/functor -- type with -t
 category/natural-transformation -- type with -t
 
 category/monomorphism -- type with -t
-category/epimorphism -- type with -t
 category/isomorphism -- type with -t
 
 category/initial -- type with -t
