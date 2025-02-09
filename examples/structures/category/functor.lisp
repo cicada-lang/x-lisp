@@ -32,12 +32,12 @@
              (z @dom:object))
     (forall ((f (@dom:morphism x y))
              (g (@dom:morphism y z)))
-      (equal (@cod:morphism (@map x) (@map z))
+      (equal-t (@cod:morphism (@map x) (@map z))
              (@fmap (@dom:compose f g))
              (@cod:compose (@fmap f) (@fmap g)))))
 
   :fmap-preserve-id
   (forall ((x @dom:object))
-    (equal (@cod:morphism (@map x) (@map x))
+    (equal-t (@cod:morphism (@map x) (@map x))
            (@fmap (@dom:id x))
            (@cod:id (@map x)))))

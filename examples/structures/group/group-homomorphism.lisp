@@ -9,14 +9,14 @@
   :homo (-> (@dom:element) (@cod:element))
 
   :homo-preserve-id
-  (equal @cod:element
+  (equal-t @cod:element
          (@homo @dom:id)
          @cod:id)
 
   :homo-preserve-compose
   (forall ((x @dom:element)
            (y @dom:element))
-    (equal (@cod:element)
+    (equal-t (@cod:element)
            (@homo (@dom:compose x y))
            (@cod:compose (@homo x) (@homo y)))))
 

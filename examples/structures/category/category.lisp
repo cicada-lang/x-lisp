@@ -2,45 +2,39 @@
 ;; there corresponds a category whose objects have that structure,
 ;; and whose morphisms preserve it.
 
-(export category)
-
-(define-class category ()
-  :object type
-  :morphism (-> @object @object type)
-  :id (forall ((x @object)) (@morphism x x))
-
+(define-class category-t ()
+  :object-t type-t
+  :morphism-t (-> @object-t @object-t type-t)
+  :id (forall ((x @object-t)) (@morphism-t x x))
   :compose
-  (implicit ((x @object)
-             (y @object)
-             (z @object))
-    (forall ((f (@morphism x y))
-             (g (@morphism y z)))
-      (@morphism x z)))
-
+  (implicit ((x @object-t)
+             (y @object-t)
+             (z @object-t))
+    (forall ((f (@morphism-t x y))
+             (g (@morphism-t y z)))
+      (@morphism-t x z)))
   :id-left
-  (implicit ((x @object)
-             (y @object))
-    (forall ((f (@morphism x y)))
-      (equal (@morphism x y)
-             (@compose (@id x) f)
-             f)))
-
+  (implicit ((x @object-t)
+             (y @object-t))
+    (forall ((f (@morphism-t x y)))
+      (equal-t (@morphism-t x y)
+        (@compose (@id x) f)
+        f)))
   :id-right
-  (implicit ((x @object)
-             (y @object))
-    (forall ((f (@morphism x y)))
-      (equal (@morphism x y)
-             (@compose f (@id y))
-             f)))
-
+  (implicit ((x @object-t)
+             (y @object-t))
+    (forall ((f (@morphism-t x y)))
+      (equal-t (@morphism-t x y)
+        (@compose f (@id y))
+        f)))
   :compose-associative
-  (implicit ((x @object)
-             (y @object)
-             (z @object)
-             (w @object))
-    (forall ((f (@morphism x y))
-             (g (@morphism y z))
-             (h (@morphism z w)))
-      (equal (@morphism x w)
-             (@compose f (@compose g h))
-             (@compose (@compose f g) h)))))
+  (implicit ((x @object-t)
+             (y @object-t)
+             (z @object-t)
+             (w @object-t))
+    (forall ((f (@morphism-t x y))
+             (g (@morphism-t y z))
+             (h (@morphism-t z w)))
+      (equal-t (@morphism-t x w)
+        (@compose f (@compose g h))
+        (@compose (@compose f g) h)))))

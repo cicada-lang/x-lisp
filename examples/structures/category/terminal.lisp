@@ -13,4 +13,4 @@
   :morphism-unique
   (implicit ((x @cat:object))
     (forall ((f (@cat:morphism x @object)))
-      (equal (@cat:morphism x @object) f (@morphism x)))))
+      (equal-t (@cat:morphism x @object) f (@morphism x)))))

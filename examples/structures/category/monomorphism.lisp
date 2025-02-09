@@ -12,10 +12,10 @@
   (implicit ((x @cat:object)
              (f (@cat:morphism x @dom))
              (g (@cat:morphism x @dom)))
-    (-> (equal (@cat:morphism x @cod)
+    (-> (equal-t (@cat:morphism x @cod)
                (@cat:compose f @morphism)
                (@cat:compose g @morphism))
-        (equal (@cat:morphism x @dom) f g))))
+        (equal-t (@cat:morphism x @dom) f g))))
 
 ;; NOTE Examples:
 ;;   (check mono (monomorphism cat x y))

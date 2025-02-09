@@ -50,6 +50,6 @@
   (implicit ((x @dom:object)
              (y @dom:object))
     (forall ((f (@dom:morphism x y)))
-      (equal (@cod:morphism (@src:map x) (@tar:map y))
+      (equal-t (@cod:morphism (@src:map x) (@tar:map y))
              (@cod:compose (@component x) (@tar:fmap f))
              (@cod:compose (@src:fmap f) (@component y))))))

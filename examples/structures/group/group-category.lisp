@@ -16,7 +16,7 @@
     ;; NOTE To prove `equal` between objects,
     ;; is to prove `equal` between each property.
     :id-left
-    (the (equal (group-homomorphism f:dom f:cod)
+    (the (equal-t (group-homomorphism f:dom f:cod)
                 (compose-group-homomorphism (id-group-homomorphism f:dom) f)
                 f)
       TODO)

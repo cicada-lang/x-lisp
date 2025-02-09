@@ -1,4 +1,3 @@
-category/category -- type with -t
 category/functor -- type with -t
 category/natural-transformation -- type with -t
 

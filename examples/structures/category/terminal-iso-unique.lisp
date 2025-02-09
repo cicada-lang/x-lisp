@@ -41,7 +41,7 @@
            (y (terminal cat))
            (f (isomorphism cat x:object y:object))
            (g (isomorphism cat x:object y:object)))
-    (equal (isomorphism cat x:object y:object) f g)))
+    (equal-t (isomorphism cat x:object y:object) f g)))
 
 (define (terminal-iso-unique cat x y f g)
   TODO)

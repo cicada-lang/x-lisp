@@ -13,11 +13,11 @@
   :inverse (@cat:morphism @cod @dom)
 
   :inverse-left
-  (equal (@cat:morphism @dom @dom)
+  (equal-t (@cat:morphism @dom @dom)
          (@cat:compose @morphism @inverse)
          (@cat:id @dom))
 
   :inverse-right
-  (equal (@cat:morphism @cod @cod)
+  (equal-t (@cat:morphism @cod @cod)
          (@cat:compose @inverse @morphism)
          (@cat:id cod)))
