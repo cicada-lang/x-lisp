@@ -1,4 +1,4 @@
-change `mul` to `compose`
+change `mul` to `compose` for group
 
 group/monoid -- type with -t
 group/group -- type with -t
@@ -8,8 +8,6 @@ group/group-homomorphism -- type with -t
 
 group/trivial-group -- type with -t
 group/trivial-semigroup -- type with -t
-
-
 
 category/category -- type with -t
 category/epimorphism -- type with -t
@@ -33,15 +31,13 @@ langs/lambda -- type with -t
 - kent-back book notes
 - 重读 EOPL -- 只有在有 x-lisp 之后重读才不枯燥
 
-# std
-
-[std] boolean-lattice/ -- absorb.lisp
-[std] boolean-lattice/ -- associative.todo.lisp
-[std] boolean-lattice/ -- boolean-domain.lisp
-[std] boolean-lattice/ -- boolean-lattice.lisp
-[std] boolean-lattice/ -- bound.lisp
-[std] boolean-lattice/ -- dual.lisp
-[std] boolean-lattice/ -- dual-involutive.lisp
-[std] boolean-lattice/ -- idempotent.lisp
-[std] boolean-lattice/ -- order.lisp
-[std] boolean-lattice/ -- unique-id.lisp
+boolean-lattice/ -- absorb.lisp
+boolean-lattice/ -- associative.todo.lisp
+boolean-lattice/ -- boolean-domain.lisp
+boolean-lattice/ -- boolean-lattice.lisp
+boolean-lattice/ -- bound.lisp
+boolean-lattice/ -- dual.lisp
+boolean-lattice/ -- dual-involutive.lisp
+boolean-lattice/ -- idempotent.lisp
+boolean-lattice/ -- order.lisp
+boolean-lattice/ -- unique-id.lisp
