@@ -1,11 +1,11 @@
-(define-datatype less-than () ((j nat) (k nat))
-  (zero-smallest ((n nat))
-                 (less-than zero (add1 n)))
-  (add1-smaller ((j nat)
-                 (k nat)
-                 (prev-smaller (less-than j k)))
-                (less-than (add1 j) (add1 k))))
+(define-datatype less-than-t () ((j nat-t) (k nat-t))
+  (zero-smallest ((n nat-t))
+                 (less-than-t zero (add1 n)))
+  (add1-smaller ((j nat-t)
+                 (k nat-t)
+                 (prev-smaller (less-than-t j k)))
+                (less-than-t (add1 j) (add1 k))))
 
-less-than
-(less-than (add1 zero))
-(less-than (add1 zero) (add1 (add1 zero)))
+less-than-t
+(less-than-t (add1 zero))
+(less-than-t (add1 zero) (add1 (add1 zero)))

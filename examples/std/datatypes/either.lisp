@@ -1,3 +1,3 @@
-(define-datatype either ((left type) (right type)) ()
-  (left-either (left) (either left right))
-  (right-either (right) (either left right)))
+(define-datatype either-t ((left-t type-t) (right-t type-t)) ()
+  (either-left ((left left-t)) (either-t left-t right-t))
+  (either-right ((right right-t)) (either-t left-t right-t)))

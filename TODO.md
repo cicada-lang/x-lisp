@@ -1,12 +1,3 @@
-langs/lambda -- type with -t
-datatypes/bool -- type with -t
-datatypes/either -- type with -t
-datatypes/fin -- type with -t
-datatypes/less-than -- type with -t
-datatypes/list -- type with -t
-datatypes/nat -- type with -t
-datatypes/vector -- type with -t
-
 category/category -- type with -t
 category/epimorphism -- type with -t
 category/functor -- type with -t
@@ -18,8 +9,10 @@ category/natural-transformation -- type with -t
 category/terminal -- type with -t
 category/terminal-iso-unique -- type with -t
 category/trivial-category -- type with -t
+
 equality/index -- type with -t
 equality/utils -- type with -t
+
 group/group-category -- type with -t
 group/group -- type with -t
 group/group-homomorphism -- type with -t
@@ -28,8 +21,11 @@ group/monoid -- type with -t
 group/semigroup -- type with -t
 group/trivial-group -- type with -t
 group/trivial-semigroup -- type with -t
+
 groupoid/groupoid -- type with -t
 groupoid/trivial-groupoid -- type with -t
+
+langs/lambda -- type with -t
 
 change mul to compose for group
 

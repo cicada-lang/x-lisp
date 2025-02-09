@@ -1,3 +1,3 @@
-(define-datatype fin () ((n nat))
-  (zero-fin ((implicit k nat)) (fin (nat:add1 k)))
-  (add1-fin ((implicit k nat)) (-> (fin k) (fin (nat:add1 k)))))
+(define-datatype fin-t () ((n nat-t))
+  (fin-zero ((k nat-t)) (fin-t (add1 k)))
+  (fin-add1 ((k nat-t)) (-> (fin-t k) (fin-t (add1 k)))))
