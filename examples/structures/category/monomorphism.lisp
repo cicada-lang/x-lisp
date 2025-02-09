@@ -11,8 +11,8 @@
              (f (@cat:morphism-t x @dom))
              (g (@cat:morphism-t x @dom)))
     (-> (equal-t (@cat:morphism-t x @cod)
-          (@cat:compose f @morphism-t)
-          (@cat:compose g @morphism-t))
+          (@cat:compose f @morphism)
+          (@cat:compose g @morphism))
         (equal-t (@cat:morphism-t x @dom) f g))))
 
 ;; NOTE Examples:

@@ -1,5 +1,3 @@
-category/isomorphism -- type with -t
-
 category/initial -- type with -t
 category/terminal -- type with -t
 
