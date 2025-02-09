@@ -1,4 +1,3 @@
-group/trivial-group -- type with -t
 group/trivial-semigroup -- type with -t
 
 group/group-category -- type with -t
