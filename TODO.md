@@ -1,5 +1,3 @@
-groupoid/trivial-groupoid -- type with -t
-
 langs/lambda -- type with -t
 
 回顾带有类型系统的 lisp 语法设计
