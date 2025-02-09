@@ -1,7 +1,7 @@
-(import semigroup "semigroup.lisp")
+(import semigroup-t "semigroup.lisp")
 
 (define trivial-semigroup
-  (new semigroup
-    :element trivial
+  (new semigroup-t
+    :element-t trivial-t
     :compose (lambda (x y) sole)
     :compose-associative (lambda (x y z) refl)))
