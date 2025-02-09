@@ -7,7 +7,7 @@
         "group-homomorphism.lisp")
 
 (define group-category
-  (create category
+  (new category
     :object group
     :morphism (lambda (G H) (group-homomorphism G H))
     :id id-group-homomorphism

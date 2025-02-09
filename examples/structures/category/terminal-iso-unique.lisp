@@ -18,7 +18,7 @@
 (define (terminal-iso cat x y)
   (let ((f (x:morphism y:object))
         (g (y:morphism x:object)))
-    (create isomorphism
+    (new isomorphism
       :cat cat
       :dom x:object
       :cod y:object

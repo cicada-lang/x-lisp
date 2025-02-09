@@ -2,7 +2,7 @@
 (import isomorphism trivial-category "../category/index.lisp")
 
 (define trivial-isomorphism
-  (create isomorphism
+  (new isomorphism
     :cat trivial-category
     :dom sole
     :cod sole
@@ -12,7 +12,7 @@
     :inverse-right refl))
 
 (define trivial-groupoid
-  (create (groupoid :object trivial)
+  (new (groupoid :object trivial)
     ...trivial-category
     :inverse (lambda (f) sole)
     :inverse-iso (lambda (f) trivial-isomorphism)))

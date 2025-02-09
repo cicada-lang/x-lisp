@@ -1,7 +1,7 @@
 (import group "group.lisp")
 
 (define trivial-group
-  (create group
+  (new group
     :element trivial
     :compose (lambda (x y) sole)
     :compose-associative (lambda (x y z) refl)

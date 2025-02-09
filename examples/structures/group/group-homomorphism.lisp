@@ -25,7 +25,7 @@
     (group-homomorphism :dom G :cod G)))
 
 (define (id-group-homomorphism G)
-  (create group-homomorphism
+  (new group-homomorphism
     :dom G
     :cod G
     :homo (lambda (x) x)
@@ -41,7 +41,7 @@
       (group-homomorphism G K))))
 
 (define (compose-group-homomorphism (implicit G H K) f g)
-  (create group-homomorphism
+  (new group-homomorphism
     :dom G
     :cod K
 
