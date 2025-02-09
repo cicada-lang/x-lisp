@@ -9,12 +9,12 @@ Dynamicly typed language with GC (optional explicit free).
 
 ```scheme
 (define-data exp?
-  (var-exp (name string?))
-  (fn-exp (name string?) (body exp?))
-  (ap-exp (target exp?) (arg exp?)))
+  (exp-var (name string?))
+  (exp-fn (name string?) (body exp?))
+  (exp-ap (target exp?) (arg exp?)))
 
 (match-data exp? exp
-  ((var-exp name) ...)
-  ((fn-exp name body) ...)
-  ((ap-exp target arg) ...))
+  ((exp-var name) ...)
+  ((exp-fn name body) ...)
+  ((exp-ap target arg) ...))
 ```
