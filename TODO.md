@@ -1,5 +1,3 @@
-group/group-homomorphism -- type with -t
-
 groupoid/groupoid -- type with -t
 groupoid/trivial-groupoid -- type with -t
 
