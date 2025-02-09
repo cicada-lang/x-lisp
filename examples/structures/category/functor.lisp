@@ -17,13 +17,10 @@
   :dom category-t
   :cod category-t
   :map (-> @dom:object-t @cod:object-t)
-
-  :fmap
-  (implicit ((x @dom:object-t)
-             (y @dom:object-t))
-    (forall ((f (@dom:morphism-t x y)))
-      (@cod:morphism-t (@map x) (@map y))))
-
+  :fmap (implicit ((x @dom:object-t)
+                   (y @dom:object-t))
+          (forall ((f (@dom:morphism-t x y)))
+            (@cod:morphism-t (@map x) (@map y))))
   :fmap-preserve-compose
   (implicit ((x @dom:object-t)
              (y @dom:object-t)
@@ -33,7 +30,6 @@
       (equal-t (@cod:morphism-t (@map x) (@map z))
         (@fmap (@dom:compose f g))
         (@cod:compose (@fmap f) (@fmap g)))))
-
   :fmap-preserve-id
   (forall ((x @dom:object-t))
     (equal-t (@cod:morphism-t (@map x) (@map x))

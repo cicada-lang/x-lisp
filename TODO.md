@@ -1,5 +1,3 @@
-category/natural-transformation -- type with -t
-
 category/monomorphism -- type with -t
 category/isomorphism -- type with -t
 

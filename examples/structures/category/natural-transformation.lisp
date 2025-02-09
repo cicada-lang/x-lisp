@@ -1,5 +1,5 @@
-(import category "category.lisp")
-(import functor "functor.lisp")
+(import category-t "category.lisp")
+(import functor-t "functor.lisp")
 
 ;; To each natural translation,
 ;; from a construction `F` of type `A -> B`,
@@ -29,27 +29,22 @@
 
 ;; (A homology theory is a functor,
 ;; from the category of topology spaces
-;; to the category of abelian-groups.)
+;; to the category of abelian groups.)
 
-(export natural-transformation)
-
-(define-class natural-transformation ()
-  :dom category
-  :cod category
-
-  ;; NOTE The following use of `Functor(dom, cod)`
+(define-class natural-transformation-t ()
+  :dom category-t
+  :cod category-t
+  ;; NOTE The following use of `(functor-t @dom @cod)`
   ;;  is an example of fulfilling type.
-  :src (functor @dom @cod)
-  :tar (functor @dom @cod)
-
+  :src (functor-t @dom @cod)
+  :tar (functor-t @dom @cod)
   :component
-  (forall ((x @dom:object))
-    (@cod:morphism (@src:map x) (@tar:map x)))
-
+  (forall ((x @dom:object-t))
+    (@cod:morphism-t (@src:map x) (@tar:map x)))
   :naturality
-  (implicit ((x @dom:object)
-             (y @dom:object))
-    (forall ((f (@dom:morphism x y)))
-      (equal-t (@cod:morphism (@src:map x) (@tar:map y))
-             (@cod:compose (@component x) (@tar:fmap f))
-             (@cod:compose (@src:fmap f) (@component y))))))
+  (implicit ((x @dom:object-t)
+             (y @dom:object-t))
+    (forall ((f (@dom:morphism-t x y)))
+      (equal-t (@cod:morphism-t (@src:map x) (@tar:map y))
+        (@cod:compose (@component x) (@tar:fmap f))
+        (@cod:compose (@src:fmap f) (@component y))))))
